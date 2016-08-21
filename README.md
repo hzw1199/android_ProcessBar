@@ -33,5 +33,5 @@ processBar.setupWithViewPager(viewPager);
 
 * 若对你有帮助请加星  
 
-![](/media/anglerMOB30Rwuzongheng08212016130009.gif)
+![](/media/anglerMOB30Rwuzongheng08212016140333.gif)
 

@@ -1,5 +1,5 @@
 # Process Bar
-[中文看这里](/READMDcn.md)  
+[中文看这里](/READMEcn.md)  
 
 * work with ViewPager  
 

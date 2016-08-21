@@ -1,12 +1,10 @@
-# Process Bar
-[中文看这里](/READMDcn.md)  
-
-* work with ViewPager  
+# 进度指示条
+* 跟ViewPager配合使用  
 
 ```java
 processBar.setupWithViewPager(viewPager);
 ```
-* support xml attributes  
+* 支持xml定义样式  
 
 ```xml
 <declare-styleable name="ProcessBar">
@@ -18,7 +16,7 @@ processBar.setupWithViewPager(viewPager);
    <attr name="processbar_unselected_text_size" format="dimension"></attr>
 </declare-styleable>
 ```
- Example：
+ 例子：
 
 ```xml
 <com.adam.processbar.ProcessBar
@@ -33,7 +31,7 @@ processBar.setupWithViewPager(viewPager);
    app:processbar_unselected_text_size="14sp"/>
 ```
 
-* If this project helps you, please star me.  
+* 若对你有帮助请加星  
 
 ![](/media/anglerMOB30Rwuzongheng08212016140333.gif)
 

@@ -1,5 +1,30 @@
 # Process Bar
+[![](https://jitpack.io/v/hzw1199/android_ProcessBar.svg)](https://jitpack.io/#hzw1199/android_ProcessBar)
+
 [中文看这里](/READMEcn.md)  
+
+![](/media/anglerMOB30Rwuzongheng08212016140333.gif)
+
+# Download
+Add it in your build.gradle at the end of repositories:  
+
+```
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+
+Add the dependency in the form:  
+
+```
+dependencies {
+    compile 'com.github.hzw1199:android_ProcessBar:v1.0'
+}
+```
+# Usage
 
 * work with ViewPager  
 
@@ -34,6 +59,4 @@ processBar.setupWithViewPager(viewPager);
 ```
 
 * If this project helps you, please star me.  
-
-![](/media/anglerMOB30Rwuzongheng08212016140333.gif)
 

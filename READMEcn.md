@@ -1,4 +1,29 @@
-# 进度指示条
+# Process Bar
+[![](https://jitpack.io/v/hzw1199/android_ProcessBar.svg)](https://jitpack.io/#hzw1199/android_ProcessBar)
+
+![](/media/anglerMOB30Rwuzongheng08212016140333.gif)
+
+# Download
+在project的build.gradle中加入以下语句:  
+
+```
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+
+在module的build.gradle中加入以下语句:  
+
+```
+dependencies {
+    compile 'com.github.hzw1199:android_ProcessBar:v1.0'
+}
+```
+# Usage
+
 * 跟ViewPager配合使用  
 
 ```java
@@ -32,6 +57,4 @@ processBar.setupWithViewPager(viewPager);
 ```
 
 * 若对你有帮助请加星  
-
-![](/media/anglerMOB30Rwuzongheng08212016140333.gif)
 

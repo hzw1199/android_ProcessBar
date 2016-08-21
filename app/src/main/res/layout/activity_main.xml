@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.adam.processbarsample.MainActivity">
+
+    <com.adam.processbar.ProcessBar
+        android:id="@+id/processbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:processbar_titles="@array/process_bar_elements"
+        app:processbar_background="@drawable/shape_plan_tab_background"
+        app:processbar_selected_color="@color/processColor"
+        app:processbar_current_drawable="@drawable/plan_arrow"
+        app:processbar_selected_text_size="14sp"
+        app:processbar_unselected_text_size="14sp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+</LinearLayout>

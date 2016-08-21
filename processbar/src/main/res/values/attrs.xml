@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProcessBar">
+        <attr name="processbar_titles" format="reference"></attr>
+        <attr name="processbar_background" format="integer"></attr>
+        <attr name="processbar_selected_color" format="color"></attr>
+        <attr name="processbar_current_drawable" format="integer"></attr>
+        <attr name="processbar_selected_text_size" format="dimension"></attr>
+        <attr name="processbar_unselected_text_size" format="dimension"></attr>
+    </declare-styleable>
+</resources>

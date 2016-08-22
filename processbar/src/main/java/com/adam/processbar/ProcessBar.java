@@ -3,7 +3,6 @@ package com.adam.processbar;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.Nullable;
@@ -22,13 +21,12 @@ import java.util.List;
 public class ProcessBar extends LinearLayout {
     private Context context;
     private CharSequence[] titles;
-//    private LinearLayout linearLayout;
     private ViewPager mViewPager;
     private ViewPager.OnPageChangeListener mPageChangeListener;
 
-    private int color = Color.BLACK;
+    private int color;
     private Drawable curr, background;
-    private int textSizeSelected = 14, textSizeUnSelected = 14;
+    private int textSizeSelected, textSizeUnSelected;
     private List<ProcessElement> processElementList = new ArrayList<>();
 
     public ProcessBar(Context context) {
@@ -62,18 +60,30 @@ public class ProcessBar extends LinearLayout {
     }
 
     private void initAttributes(TypedArray typedArray){
+        textSizeSelected = context.getResources().getDimensionPixelSize(R.dimen.text_size_selected);
+        textSizeUnSelected = context.getResources().getDimensionPixelSize(R.dimen.text_size_unselected);
+        color = context.getResources().getColor(R.color.processColor);
+
         titles = typedArray.getTextArray(R.styleable.ProcessBar_processbar_titles);
         color = typedArray.getColor(R.styleable.ProcessBar_processbar_selected_color, color);
         curr = typedArray.getDrawable(R.styleable.ProcessBar_processbar_current_drawable);
         background = typedArray.getDrawable(R.styleable.ProcessBar_processbar_background);
         textSizeSelected = typedArray.getDimensionPixelSize(R.styleable.ProcessBar_processbar_selected_text_size, textSizeSelected);
         textSizeUnSelected = typedArray.getDimensionPixelSize(R.styleable.ProcessBar_processbar_unselected_text_size, textSizeUnSelected);
+
+        if (titles == null){
+            titles = context.getResources().getTextArray(R.array.process_bar_elements);
+        }
+        if (curr == null){
+            curr = context.getResources().getDrawable(R.drawable.plan_arrow);
+        }
+        if (background == null){
+            background = context.getResources().getDrawable(R.drawable.shape_plan_tab_background);
+        }
     }
 
     private void setContent(){
-//        linearLayout = new LinearLayout(context);
         setOrientation(LinearLayout.HORIZONTAL);
-//        addView(linearLayout);
 
         for(int i = 0; i<titles.length; i++){
             ProcessElement processElement = new ProcessElement(context, titles[i]);
@@ -89,8 +99,6 @@ public class ProcessBar extends LinearLayout {
 
 
         processElementList.get(0).setStatus(ProcessElement.STATUS_SELECTED);
-//        processElementList.get(1).setStatus(ProcessElement.STATUS_NEW);
-//        processElementList.get(2).setStatus(ProcessElement.STATUS_NEW);
     }
 
     /**根据ViewPager来自动控制进度*/

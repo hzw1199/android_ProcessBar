@@ -75,7 +75,7 @@ public class ProcessElement extends RelativeLayout {
             textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSizeUnSelected);
         }else if(status == STATUS_SELECTED){
             if(currBmp == null){
-                background.setImageResource(R.mipmap.plan_arrow);
+                background.setImageResource(R.drawable.plan_arrow);
             }else{
                 background.setImageBitmap(currBmp);
             }

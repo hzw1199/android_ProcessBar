@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FFC107</color>
     <color name="colorText">#FFFFFF</color>
+    <color name="processColor">#0f6c93</color>
 </resources>

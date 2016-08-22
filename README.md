@@ -21,7 +21,7 @@ Add the dependency in the form:
 
 ```
 dependencies {
-    compile 'com.github.hzw1199:android_ProcessBar:v1.0'
+    compile 'com.github.hzw1199:android_ProcessBar:v1.1'
 }
 ```
 # Usage
